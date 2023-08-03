@@ -25,6 +25,15 @@ function filtrar(funcion) {
   //   return p.price >= 50;
   // }) => [{price: 100, name:'tv'}]
 
+  let filtrados = [];
+
+  for (let i = 0; i < this.length; i++) {
+    let elemento = this[i];
+    let resultado = funcion(elemento);
+    if (resultado) {
+      filtrados.push(elemento);
+    }
+
 };
 
 // No modifiques nada debajo de esta linea //
